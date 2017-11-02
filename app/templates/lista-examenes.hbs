@@ -1,0 +1,13 @@
+{{outlet}}
+<h3>Lista examenes</h3>
+{{lista-examenes}}
+
+<ul>
+  {{#each model as |test|}}
+    <li>
+      {{#link-to 'examen-details' test.id tagName='button'}}
+      {{test.nombre}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>

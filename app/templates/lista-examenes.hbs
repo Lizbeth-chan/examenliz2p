@@ -1,6 +1,12 @@
 {{outlet}}
 <h3>Lista examenes</h3>
-{{lista-examenes}}
+{{#if evento.isNew}}
+  {{lista-examenes}}
+  {{else}}
+  <p>nombre</p>
+  <p>respuesta</p>
+{{/if}}
+
 
 <ul>
   {{#each model as |test|}}

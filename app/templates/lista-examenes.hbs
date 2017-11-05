@@ -1,19 +1,12 @@
-{{outlet}}
-<h3>Lista examenes</h3>
-{{#if evento.isNew}}
-  {{lista-examenes}}
-  {{else}}
-  <p>nombre</p>
-  <p>respuesta</p>
-{{/if}}
-
+<p> Lista examenes </p>
 
 <ul>
-  {{#each model as |test|}}
+    {{#each model as |test|}}
+    <!--  -->
     <li>
       {{#link-to 'examen-details' test.id tagName='button'}}
       {{test.nombre}}
       {{/link-to}}
     </li>
-  {{/each}}
+    {{/each}}
 </ul>

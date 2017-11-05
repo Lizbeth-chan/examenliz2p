@@ -1,12 +1,10 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 <div class="container">
-    <h1>My exam app</h1>
-    <div class="">
-      <ul>
-          {{#link-to 'lista-examenes'}}
-          Lista examenes
-          {{/link-to}}
-      </ul>
+    <h1>MY APP</h1>
+    {{#link-to 'nuevo-examen'}}
+    Crear Examen
+    {{/link-to}}
+    <div class="row">
+      {{outlet}}
     </div>
-    {{outlet}}
 </div>

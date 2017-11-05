@@ -1,0 +1,20 @@
+<form  {{action 'save' on='submit'}}>
+	Nombre Examen
+	{{input type='text' value=test.nombre}}
+	Fecha
+	{{input type='date' value=test.fecha}}
+	<br>
+	<button type='button' {{action 'crearPregunta'}}>Crear pregunta</button>
+				<ul>
+					{{#each test.questions as |preg|}}
+						<li>
+							{{field-preguntas question=preg}}
+						</li>
+					{{/each}}
+          <!-- <button type="button">Borrar</button> -->
+				</ul>
+
+	<button>Guardar</button>
+	<!-- <button {{action 'saveExamen'}}>Guardar</button>
+	<button {{action 'borrar'}}>Eliminar</button> -->
+</form>

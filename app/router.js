@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('lista-examenes');
   this.route('examen-details');
   this.route('nuevo-examen');
+  this.route('nueva-pregunta');
 });
 
 export default Router;

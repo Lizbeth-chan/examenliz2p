@@ -1,17 +1,19 @@
-pregunta {{input value=question.nombre}}
-<hr>
-opcion1 {{input type='text' value=option.nombre}}
-{{input cheked=model.test.question.option.op1 change=(action 'respuestaCorrecta' 1) type='radio' name='resp'}}
-<br>
-opcion2 {{input type='text' value=option.nombre}}
-{{input cheked=model.test.question.option.op2 change=(action 'respuestaCorrecta' 2) type='radio' name='resp'}}
-<br>
-opcion3 {{input type='text' value=option.nombre}}
-{{input cheked=test.question.option.op3 change=(action 'respuestaCorrecta' 3) type='radio' name='resp'}}
-<br>
-opcion4 {{input type='text' value=option.nombre}}
-{{input cheked=model.test.question.option.op4 change=(action 'respuestaCorrecta' 4) type='radio' name='resp'}}
-<hr>
-<button{{action 'borrarPregunta'}}>
-	Borrar
-</button>
+<form  {{action 'save' on='submit'}}>
+		Pregunta {{input value=question.nombre}}
+		<hr>
+		opcion1 {{input type='text' value=model.option.nombre}}
+		{{input cheked=model.option.op1 change=(action 'respuestaCorrecta' 1) type='radio' name='resp'}}
+		<br>
+		opcion2 {{input type='text' value=option.nombre}}
+		{{input cheked=model.option.op2 change=(action 'respuestaCorrecta' 2) type='radio' name='resp'}}
+		<br>
+		opcion3 {{input type='text' value=option.nombre}}
+		{{input cheked=model.option.op3 change=(action 'respuestaCorrecta' 3) type='radio' name='resp'}}
+		<br>
+		opcion4 {{input type='text' value=option.nombre}}
+		{{input cheked=model.option.op4 change=(action 'respuestaCorrecta' 4) type='radio' name='resp'}}
+		<hr>
+		<button{{action 'borrarPregunta'}}>
+			Borrar
+		</button>
+</form>

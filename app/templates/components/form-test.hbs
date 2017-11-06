@@ -4,6 +4,8 @@
 	Fecha
 	{{input type='date' value=test.fecha}}
 	<br>
+
+
 	<button type='button' {{action 'crearPregunta'}}>Crear pregunta</button>
 				<ul>
 					{{#each test.questions as |preg|}}
@@ -11,7 +13,7 @@
 							{{field-preguntas question=preg}}
 						</li>
 					{{/each}}
-          <!-- <button type="button">Borrar</button> -->
+
 				</ul>
 
 	<button>Guardar</button>

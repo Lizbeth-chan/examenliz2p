@@ -3,15 +3,15 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   store: Ember.inject.service('store'),
   save(){
-    let test= this.get('test');
+    let question= this.get('question');
 
-    if(Ember.isBlank(test.get('nombre'))){
+    if(Ember.isBlank(question.get('nombre'))){
       alert('El campo no puede estar vacio');
       return;
     }
 
-    test.save().then(()=>{
-    Ember.RSVP.all( this.get('test.questions.option').invoke('save') ).then(()=>{
+    question.save().then(()=>{
+    Ember.RSVP.all( this.get('question.options').invoke('save') ).then(()=>{
         alert('Ya se guardo');
       this.sendAction('guardar');
       })

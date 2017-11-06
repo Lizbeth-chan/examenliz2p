@@ -1,12 +1,19 @@
-<p> Lista examenes </p>
 
+<form  {{action 'save' on='submit'}}>
+  <p> Lista examenes </p>
 <ul>
     {{#each model as |test|}}
     <!--  -->
     <li>
-      {{#link-to 'examen-details' test.id tagName='button'}}
-      {{test.nombre}}
+      {{form-test test=test}}
+      {{#link-to 'examen-details' test.id  tagName="button"}}
+       Ver detalles
       {{/link-to}}
+      <button{{action 'borrarExamen' test}}>
+        Borrar
+      </button>
     </li>
+
     {{/each}}
 </ul>
+</form>
